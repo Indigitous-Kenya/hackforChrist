@@ -7,7 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(Category::class, function (Faker $faker) {
     return [
-        'title' => $faker->unique()->title,
-        'color'=>$faker->colorName,
+        'title' => $faker->unique()->word,
+        'color'=>$faker->hexColor,
     ];
 });

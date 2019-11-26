@@ -1,5 +1,6 @@
 <?php
 
+use App\model\Category;
 use App\model\Post;
 use Illuminate\Database\Seeder;
 
@@ -14,5 +15,6 @@ class DatabaseSeeder extends Seeder
     {
         factory(\App\User::class, 50)->create();
         factory(Post::class, 1000)->create();
+        factory(Category::class, 10)->create();
     }
 }
