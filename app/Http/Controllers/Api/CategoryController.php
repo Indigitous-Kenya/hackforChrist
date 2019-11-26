@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class CategoryController extends Controller
 {
@@ -10,7 +11,5 @@ class CategoryController extends Controller
     {}
 
     public function show($id)
-    {}
-    public function store(Request $request)
     {}
 }
