@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         factory(\App\User::class, 50)->create();        
         factory(Category::class, 10)->create();
-        factory(Post::class, 1000)->create();
+        factory(Post::class, 800)->create();
         factory(Tag::class, 30)->create();
         factory(Image::class, 1000)->create();
     }
