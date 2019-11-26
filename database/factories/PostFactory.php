@@ -10,7 +10,7 @@ $factory->define(Post::class, function (Faker $faker) {
         'title'=>$faker->sentence,
         'content' => $faker->paragraph,
         'author_id'=> $faker->numberBetween(1,50),
-        'post_type'=>$faker->randomElement(['video', 'text']),
+        'post_type'=>$faker->text, //video
         'category_id'=> $faker->numberBetween(1,10)
     ];
 });
