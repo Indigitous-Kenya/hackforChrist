@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Image extends Model
 {
-    protected $fillable = ['description', 'url', 'featured'];
+    protected $fillable = ['description', 'url', 'featured','post_id'];
 }
