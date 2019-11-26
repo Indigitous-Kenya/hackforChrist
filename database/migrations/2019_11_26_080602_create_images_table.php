@@ -17,7 +17,7 @@ class CreateImagesTable extends Migration
             $table->bigIncrements('id');
             $table->string('description');
             $table->string('url');
-            $table->string('featured');
+            $table->boolean('featured');
             $table->bigInteger('post_id');
             $table->timestamps();
         });
