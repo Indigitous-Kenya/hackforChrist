@@ -24,7 +24,13 @@ class CategoryController extends Controller
     }
 
     public function show($id)
-    {}
+    {
+        return view('category/index')->with(
+            [
+                'categories' => Category::findOrFail($id)
+            ]
+        );
+    }
     public function store(Request $request)
     {}
 }
