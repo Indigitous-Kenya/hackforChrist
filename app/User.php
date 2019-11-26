@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\model\Comment;
+use App\model\Post;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -38,4 +40,13 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class, 'author_id', 'id');
+    }
+    public function comments()
+    {
+        return $this->hasMany(Comment::class, 'author_id', 'id');
+    }
 }
