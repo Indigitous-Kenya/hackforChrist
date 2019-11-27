@@ -43,5 +43,6 @@ class CategoryController extends Controller
         $category-> title = $request->get('category_title');
         $category-> color = $request->get('category_color');
         $category->save();
+        return redirect()->back();
     }
 }
