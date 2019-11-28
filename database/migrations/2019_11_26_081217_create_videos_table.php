@@ -17,7 +17,7 @@ class CreateVideosTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->string('url');
-            $table->bigIncrements('post_id');
+            $table->bigInteger('post_id');
             $table->timestamps();
         });
     }
