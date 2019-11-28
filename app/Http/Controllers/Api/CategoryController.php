@@ -4,21 +4,16 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\CategoriesResource;
+use App\Http\Resources\CategoryResource;
 use App\Http\Resources\PostResource;
 use App\model\Category;
 
 class CategoryController extends Controller
 {
-    public $categoryMaster;
-
-    public function __construct()
-    {
-        $this->categoryMaster = new CategoryMasterController();
-    }
+    
     public function index()
     {
-        $categories = new Category();
+        $categories =  Category::all();
         return CategoryResource::collection($categories) ;
     }
 
